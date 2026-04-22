@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666666;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+/* Products Section */
+.products-section {
+    margin-bottom: 50px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 4px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.product-image:hover img {
+    transform: scale(1.05);
+}
+
+
+
+.add-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-btn:hover {
+    background: grey;
+}
+
+.product-info {
+    font-size: 12px;
+}
+
+.product-name {
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: #000000;
+}
+
+.product-price {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.product-sizes {
+    color: #666666;
+    font-size: 11px;
+}
+
+.new-launch-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.new-launch-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.new-launch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(625px, 1fr));
+  gap: 8px;
+}
+
+.launch-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.launch-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+
+.launch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.launch-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-section {
+    margin-bottom: 15px;
+}
+
+.footer-toggle {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-toggle:hover {
+    opacity: 0.7;
+}
+
+.footer-right {
+    flex: 1;
+    max-width: 400px;
+}
+
+.footer-right h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.email-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.email-input::placeholder {
+    color: #999999;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 0;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.modal-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 4px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.modal-body .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.modal-body .description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sizes-section {
+    margin-bottom: 20px;
+}
+
+.sizes-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sizes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.size-btn {
+    padding: 10px 15px;
+    border: 2px solid #333;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.size-btn:hover {
+    background: #f0f0f0;
+}
+
+.size-btn.selected {
+    background: #333;
+    color: white;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #555;
+}
+
+

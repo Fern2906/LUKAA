@@ -1,0 +1,146 @@
+/* Footer Component Styles */
+
+footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-section {
+    margin-bottom: 15px;
+}
+
+.footer-toggle {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-toggle:hover {
+    opacity: 0.7;
+}
+
+.footer-right {
+    flex: 1;
+    max-width: 400px;
+}
+
+.footer-right h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.email-input {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.email-input::placeholder {
+    color: #999999;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    footer {
+        margin-top: 50px;
+        padding: 25px 20px;
+    }
+    
+    .footer-content {
+        gap: 40px;
+    }
+    
+    .email-input {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 40px;
+        padding: 20px 15px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-right {
+        max-width: 100%;
+    }
+    
+    .email-input {
+        width: 100%;
+    }
+    
+    .footer-toggle {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    
+    .footer-section {
+        margin-bottom: 12px;
+    }
+    
+    .footer-right h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        margin-top: 30px;
+        padding: 20px 10px;
+    }
+    
+    .footer-content {
+        gap: 25px;
+    }
+    
+    .footer-toggle {
+        font-size: 11px;
+        padding: 8px 0;
+    }
+    
+    .footer-section {
+        margin-bottom: 10px;
+    }
+    
+    .footer-right h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .email-input {
+        padding: 10px;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: white;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-radius: 0 0 15px 15px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header .user-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.btn,
+.btn-edit,
+.btn-logout {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #000;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn:hover,
+.btn-edit:hover,
+.btn-logout:hover {
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.btn-logout {
+    color: white;
+    background: rgba(198, 40, 40, 0.3);
+}
+.btn-logout:hover {
+    background: rgba(198, 40, 40, 0.5);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-info .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.product-info .stock {
+    font-size: 14px;
+    color: #333;
+}
+
+.product-actions {
+    padding: 0 15px 15px 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.no-products {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alert-success {
+    background: rgba(232, 245, 233, 0.6);
+    backdrop-filter: blur(8px);
+    color: #2e7d32;
+}
+
+.alert-error {
+    background: rgba(255, 235, 238, 0.6);
+    backdrop-filter: blur(8px);
+    color: #c62828;
+}
+
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .header h1 {
+        font-size: 20px;
+    }
+    
+    .header .user-info {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .btn-logout {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .container {
+        margin: 20px auto;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    
+    .product-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 18px;
+    }
+    
+    .container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-card img {
+        height: 250px;
+    }
+}

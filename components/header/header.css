@@ -1,0 +1,220 @@
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(12px) saturate(180%); 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); 
+}
+
+
+.top-header-left,
+.top-header-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+
+.header-btn {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.header-btn:hover {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px) saturate(180%);
+}
+
+
+.back-btn {
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
+.home-btn {
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
+.cart-btn {
+    position: relative;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart-btn:hover {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #c62828;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.user-name {
+    font-size: 14px;
+    color: #000;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 6px 12px;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+body {
+    padding-top: 60px;
+}
+
+.header-btn,
+.cart-btn {
+    transition: transform 0.15s ease;
+}
+
+.header-btn:active,
+.cart-btn:active {
+    transform: scale(0.94);
+    animation: btnPop 0.15s ease-out;
+}
+
+@keyframes btnPop {
+    0% { transform: scale(0.94); }
+    60% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (min-width: 1024px) {
+    .top-header {
+        padding: 12px 30px;
+    }
+
+    .header-btn,
+    .cart-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .user-name {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .top-header {
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    .top-header-left,
+    .top-header-right {
+        gap: 10px;
+    }
+
+    .header-btn,
+    .cart-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .back-btn {
+        font-size: 16px;
+    }
+
+    .user-name {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .top-header {
+        padding: 8px 12px;
+        flex-direction: row;
+    }
+
+    .top-header-left,
+    .top-header-right {
+        gap: 8px;
+    }
+
+    /* Botones más compactos */
+    .header-btn,
+    .cart-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .back-btn {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .user-name {
+        display: none;   
+    }
+
+    .cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        top: -6px;
+        right: -6px;
+    }
+}
+
+
